@@ -27,19 +27,17 @@ const courses = [
 const Index = () => {
   return (
     <div className="relative bg-black overflow-hidden">
-      {/* Background Video */}
-      <video
-        className="absolute inset-0 w-full h-screen object-cover z-0"
-        autoPlay
-        muted
-        loop
-        playsInline
-      >
-        <source
-          src="https://res.cloudinary.com/doevp9obh/video/upload/v1751630378/social_u7865913127_httpss.mj.runfy9I6hP3bjY_A_serene_cinematic_anima_3732f431-944f-4ee3-9b66-c82c1462de47_1_vjttzg.mp4"
-          type="video/mp4"
+      {/* Background Video - YouTube embed */}
+      <div className="absolute inset-0 h-screen z-0 overflow-hidden pointer-events-none">
+        <iframe
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+          style={{ width: "177.78vh", height: "100vh", minWidth: "100%", minHeight: "56.25vw" }}
+          src="https://www.youtube.com/embed/ZNFqLfJQFJA?autoplay=1&mute=1&loop=1&playlist=ZNFqLfJQFJA&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1"
+          allow="autoplay; fullscreen"
+          frameBorder="0"
+          title="Qigong practice"
         />
-      </video>
+      </div>
 
       {/* Video Overlay */}
       <div className="absolute inset-0 h-screen bg-black/40 z-0" />
